@@ -3,7 +3,7 @@
 	"id": "nameplate-tweaks",
 	"version": "${version}",
 	"name": "Nameplate Tweaks",
-	"description": "",
+	"description": "Adds customizable visual effects to nameplates, including shadows, physics, and so on...",
 	"authors": [
 		"PrincParshia"
 	],
@@ -16,13 +16,12 @@
 		]
 	},
 	"mixins": [
-		"nameplate-tweaks.client.mixins.json"
+		"nameplate-tweaks.mixins.json"
 	],
 	"depends": {
-		"fabricloader": ">=0.17.3",
-		"minecraft": "~1.21.10",
+		"fabricloader": ">=0.18.0",
+		"minecraft": ">=1.21.10",
 		"java": ">=21",
-		"fabric-api": "*",
-        "fzzy_config": "*"
+		"fabric-api": "*"
 	}
 }

@@ -1,9 +1,0 @@
-{
-  "config.nameplate-tweaks": "Nameplate Tweaks",
-  "config.nameplate-tweaks.nameplateShadow": "Nameplate Shadow",
-  "config.nameplate-tweaks.nameplatePhysics": "Nameplate Physics",
-  "config.nameplate-tweaks.selfNameplate": "Self Nameplate",
-  "config.nameplate-tweaks.livingEntitiesNameplate": "Living Entities Nameplate",
-  "config.nameplate-tweaks.livingEntitiesNameplateEnabled": "Enabled",
-  "config.nameplate-tweaks.livingEntitiesNameplateFilter": "Filter"
-}

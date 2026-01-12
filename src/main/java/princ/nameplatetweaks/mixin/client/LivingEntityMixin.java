@@ -1,5 +1,7 @@
-package princ.nameplatetweaks.client.mixin;
+package princ.nameplatetweaks.mixin.client;
 
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
@@ -8,11 +10,16 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-import static princ.nameplatetweaks.client.NameplateTweaks.*;
+import static princ.nameplatetweaks.client.NameplateTweaks.config;
 
 @Mixin(LivingEntity.class)
+@Environment(EnvType.CLIENT)
 public class LivingEntityMixin {
-    @Inject( method = "shouldShowName", at = @At("RETURN"), cancellable = true )
+    @Inject(
+            method = "shouldShowName",
+            at = @At("RETURN"),
+            cancellable = true
+    )
     public void shouldShowName(CallbackInfoReturnable<Boolean> callbackInfoReturnable) {
         LivingEntity entity = (LivingEntity) (Object) this;
         EntityType<?> entityType = entity.getType();

@@ -1,4 +1,4 @@
-package princ.nameplatetweaks.client.mixin;
+package princ.nameplatetweaks.mixin.client;
 
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
@@ -8,7 +8,7 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.ModifyArg;
 
-import static princ.nameplatetweaks.client.NameplateTweaks.*;
+import static princ.nameplatetweaks.client.NameplateTweaks.config;
 
 @Mixin(NameTagFeatureRenderer.class)
 @Environment(EnvType.CLIENT)
@@ -21,7 +21,7 @@ public class NameTagFeatureRendererMixin {
             ),
             index = 4
     )
-    public boolean redirectDrawShadow(boolean bl) {
+    public boolean modifyDrawShadow(boolean bl) {
         if (config.nameplateShadow) {
             return true;
         }
@@ -36,7 +36,7 @@ public class NameTagFeatureRendererMixin {
             ),
             index = 7
     )
-    public Font.DisplayMode redirectFontDisplayMode(Font.DisplayMode displayMode) {
+    public Font.DisplayMode modifyFontDisplayMode(Font.DisplayMode displayMode) {
         if (config.nameplatePhysics) {
             return Font.DisplayMode.NORMAL;
         }

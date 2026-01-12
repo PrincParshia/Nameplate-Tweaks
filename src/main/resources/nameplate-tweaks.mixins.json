@@ -1,0 +1,17 @@
+{
+	"required": true,
+	"package": "princ.nameplatetweaks.mixin",
+	"compatibilityLevel": "JAVA_21",
+	"mixins": [],
+    "client": [
+        "client/NameTagFeatureRendererMixin",
+        "client/LivingEntityRendererMixin",
+        "client/LivingEntityMixin"
+    ],
+	"injectors": {
+		"defaultRequire": 1
+	},
+	"overwrites": {
+		"requireAnnotations": true
+	}
+}

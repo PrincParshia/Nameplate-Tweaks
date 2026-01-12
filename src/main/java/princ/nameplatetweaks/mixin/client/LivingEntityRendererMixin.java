@@ -1,4 +1,4 @@
-package princ.nameplatetweaks.client.mixin;
+package princ.nameplatetweaks.mixin.client;
 
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
@@ -11,7 +11,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-import static princ.nameplatetweaks.client.NameplateTweaks.*;
+import static princ.nameplatetweaks.client.NameplateTweaks.config;
 
 @Mixin(LivingEntityRenderer.class)
 @Environment(EnvType.CLIENT)
